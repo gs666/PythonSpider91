@@ -85,7 +85,7 @@ def main():
     top10000List=[]
     
     for page in range(1,505):#1到500，加5防止数组溢出
-        FvUrl='http://93.91p12.space/v.php?category=mf&viewtype=basic&page='+str(page)
+        FvUrl=url+str(page)
         print('正在保存的页面为第'+str(page)+'页')
         top10000List+=getVideoInfo(getHTMLText(FvUrl,cookies))
     saveToExcel(top10000List)
